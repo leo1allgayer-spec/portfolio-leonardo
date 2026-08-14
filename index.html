@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Leonardo - Web Developer &amp; Site Designer</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Geist:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#8d90a2",
+                        "on-error": "#690005",
+                        "inverse-primary": "#004dea",
+                        "outline-variant": "#434656",
+                        "on-surface-variant": "#c3c5d9",
+                        "surface-variant": "#353534",
+                        "tertiary-container": "#686767",
+                        "secondary": "#c8c6c5",
+                        "tertiary-fixed-dim": "#c8c6c6",
+                        "surface-dim": "#131313",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-container-lowest": "#0e0e0e",
+                        "tertiary": "#c8c6c6",
+                        "primary": "#b6c4ff",
+                        "on-secondary-container": "#b7b5b4",
+                        "error-container": "#93000a",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-container": "#e9e6e6",
+                        "tertiary-fixed": "#e4e2e1",
+                        "secondary-container": "#474746",
+                        "inverse-surface": "#e5e2e1",
+                        "on-surface": "#e5e2e1",
+                        "background": "#131313",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface-bright": "#3a3939",
+                        "surface-container": "#201f1f",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "on-primary-fixed-variant": "#0039b3",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-tertiary": "#303030",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed": "#001551",
+                        "surface-container-highest": "#353534",
+                        "surface-container-high": "#2a2a2a",
+                        "surface": "#131313",
+                        "inverse-on-surface": "#313030",
+                        "on-primary": "#002780",
+                        "primary-fixed": "#dce1ff",
+                        "on-primary-container": "#e3e6ff",
+                        "primary-container": "#0055ff",
+                        "secondary-fixed": "#e5e2e1",
+                        "surface-tint": "#b6c4ff",
+                        "on-background": "#e5e2e1",
+                        "primary-fixed-dim": "#b6c4ff",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "on-secondary": "#313030"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap-mobile": "80px",
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "unit-base": "8px",
+                        "section-gap-desktop": "160px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "label-sm": ["Geist"],
+                        "headline-xl-mobile": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-sm": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-xl-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .electric-glow { box-shadow: 0 0 15px rgba(0, 85, 255, 0.2); }
+        .electric-glow-hover:hover { box-shadow: 0 0 25px rgba(0, 85, 255, 0.4); }
+        .card-surface { background: linear-gradient(135deg, #1A1A1A 0%, #2E2E2E 100%); }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden selection:bg-primary-container selection:text-white">
+<!-- Header (Shared Component) -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant/30 font-body-md text-body-md">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-gutter py-unit-base">
+<a class="font-headline-md text-headline-md font-bold text-on-surface tracking-tighter hover:text-primary transition-colors duration-300" href="#">
+                Leonardo.
+            </a>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 active:scale-95 transition-transform" href="#inicio">Início</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 active:scale-95 transition-transform" href="#projetos">Projetos</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 active:scale-95 transition-transform" href="#sobre">Sobre</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 active:scale-95 transition-transform" href="#servicos">Serviços</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 active:scale-95 transition-transform" href="#contato">Contato</a>
+</nav>
+<a class="hidden md:inline-flex items-center justify-center bg-primary-container text-white px-6 py-2.5 rounded-lg font-label-sm text-label-sm uppercase tracking-wider electric-glow hover:bg-primary-container/90 transition-all active:scale-95" href="#contato">
+                Solicitar orçamento
+            </a>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-section-gap-mobile md:pb-section-gap-desktop">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-16 md:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center" id="inicio">
+<div class="lg:col-span-6 space-y-6">
+<div class="inline-flex items-center space-x-2 bg-surface-container-high px-4 py-2 rounded-full border border-outline-variant/30">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">DESENVOLVIMENTO WEB • DESIGN • EXPERIÊNCIAS DIGITAIS</span>
+</div>
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-on-surface">
+                    Sites que transformam ideias em <span class="text-primary-container">experiências digitais.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                    Desenvolvo sites modernos, responsivos e pensados para apresentar negócios com clareza, profissionalismo e personalidade.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<a class="inline-flex items-center justify-center bg-primary-container text-white px-8 py-4 rounded-lg font-label-sm text-label-sm uppercase tracking-wider electric-glow electric-glow-hover transition-all" href="#projetos">
+                        Conheça meus projetos
+                    </a>
+<a class="inline-flex items-center justify-center bg-transparent border border-outline text-on-surface px-8 py-4 rounded-lg font-label-sm text-label-sm uppercase tracking-wider hover:border-primary hover:text-primary transition-all" href="#contato">
+                        Fale comigo
+                    </a>
+</div>
+</div>
+<div class="lg:col-span-6 relative h-[400px] md:h-[600px] flex items-center justify-center">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary-container/10 to-transparent rounded-full blur-3xl"></div>
+<!-- Placeholder for Hero Abstract/Mockup Image -->
+<div class="relative z-10 w-full h-full bg-surface-container rounded-xl border border-outline-variant/20 overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover opacity-80 mix-blend-luminosity hover:mix-blend-normal transition-all duration-700" data-alt="A sophisticated digital 3D composition showing a sleek modern laptop and smartphone mockup displaying dark mode professional website designs. The lighting is dramatic, high-contrast, with cool blue tech-noir accent lights reflecting off the glass and metallic surfaces against a deep graphite background. The mood is premium, tech-focused, and cutting-edge." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2p2MxWcdpuKwiWXKxQUEse63Ckb4mrqwPGzJlAkSMFd9Q35AdYwMoRbq-cZZEG_GPVmq39kdEyVvZlweirUPWV2wlIvpaPzyO4X55EExisf9FG2oUNlRph6n8v8ccUqNQkLxN30oS7QRB2ZSQLEXfIrTdB33ylbJmCXGDaSVPCZGQSs80iuoito03_auIFQdKw0dwOzwxK20tvzpBW8UgoEMYYzdbzIOev0YxO4PVPFtQwLyWPoNS"/>
+</div>
+</div>
+</section>
+<!-- Projects Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-section-gap-mobile md:py-section-gap-desktop" id="projetos">
+<div class="mb-12">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Projetos selecionados</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Uma seleção de sites desenvolvidos focados em performance, design premium e conversão.
+                </p>
+<!-- Filter -->
+<div class="flex flex-wrap gap-3 mt-8">
+<button class="px-4 py-2 bg-primary-container text-white rounded-full font-label-sm text-label-sm">Todos</button>
+<button class="px-4 py-2 bg-surface-container border border-outline-variant/30 text-on-surface-variant rounded-full font-label-sm text-label-sm hover:text-on-surface transition-colors">Institucional</button>
+<button class="px-4 py-2 bg-surface-container border border-outline-variant/30 text-on-surface-variant rounded-full font-label-sm text-label-sm hover:text-on-surface transition-colors">Landing Pages</button>
+<button class="px-4 py-2 bg-surface-container border border-outline-variant/30 text-on-surface-variant rounded-full font-label-sm text-label-sm hover:text-on-surface transition-colors">Saúde e beleza</button>
+</div>
+</div>
+<!-- Bento Grid / Projects Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project Card 1 (Highlighted) -->
+<div class="lg:col-span-2 group relative rounded-xl overflow-hidden bg-[#1A1A1A] border border-[#2E2E2E] h-[400px] flex flex-col justify-end">
+<img alt="Advocacia Assetran" class="absolute inset-0 w-full h-full object-cover object-top opacity-50 group-hover:scale-105 group-hover:opacity-30 transition-all duration-700" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+<div class="relative z-10 p-8">
+<div class="flex gap-2 mb-3">
+<span class="bg-[#2E2E2E] px-3 py-1 rounded font-label-sm text-[12px] uppercase text-on-surface">Institucional</span>
+<span class="bg-[#2E2E2E] px-3 py-1 rounded font-label-sm text-[12px] uppercase text-on-surface">Direito</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Advocacia Assetran</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 max-w-md opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-y-4 group-hover:translate-y-0">Site institucional focado em transmitir autoridade e credibilidade para escritório de advocacia.</p>
+<a class="inline-flex items-center text-primary-container font-label-sm uppercase tracking-wider hover:text-primary transition-colors" href="#">
+                            Ver projeto <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="group relative rounded-xl overflow-hidden bg-[#1A1A1A] border border-[#2E2E2E] h-[400px] flex flex-col justify-end">
+<img alt="Avante Digital" class="absolute inset-0 w-full h-full object-cover object-top opacity-50 group-hover:scale-105 group-hover:opacity-30 transition-all duration-700" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+<div class="relative z-10 p-8">
+<div class="flex gap-2 mb-3">
+<span class="bg-[#2E2E2E] px-3 py-1 rounded font-label-sm text-[12px] uppercase text-on-surface">Agência</span>
+</div>
+<h3 class="font-headline-md text-[24px] font-bold text-on-surface mb-2">Avante Digital</h3>
+<a class="inline-flex items-center text-primary-container font-label-sm uppercase tracking-wider hover:text-primary transition-colors mt-4" href="#">
+                            Ver projeto <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Project Card 3 (Placeholder) -->
+<div class="group relative rounded-xl overflow-hidden bg-[#1A1A1A] border border-[#2E2E2E] h-[400px] flex flex-col justify-end">
+<div class="absolute inset-0 w-full h-full bg-surface-container flex items-center justify-center p-8">
+<img class="w-full object-cover shadow-2xl rounded opacity-50 group-hover:scale-105 group-hover:opacity-30 transition-all duration-700" data-alt="A clean, minimalist 3D browser mockup displaying a sleek modern website for 'Plaques' with dark mode aesthetics, clean typography, and a subtle electric blue accent line. The background is a very dark, moody studio environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAb-9So1DWwxda1UajoxRDxL8I6ifvRh_EZ3aiAWrtYR3N1tIkTxhiPxdAvxV6Jje6WVOe8zHFUqD0LBoPqV_Oii-c4vcMLpvZDpX8fZzKyTeG2BIMAoT1rW-EAek2NnYSTDnMNd8ltEsWaGgPyILZAdNmuvjD-4lCgUTEmHQ76-F1pu9zL7byVA9Lz2eRJ_DAefB51kpAH3_rQ3KI3fWiPpx8TOnMW1zjedP3KbUHXD8NkfgBUD6B0"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent"></div>
+<div class="relative z-10 p-8">
+<div class="flex gap-2 mb-3">
+<span class="bg-[#2E2E2E] px-3 py-1 rounded font-label-sm text-[12px] uppercase text-on-surface">Landing Page</span>
+</div>
+<h3 class="font-headline-md text-[24px] font-bold text-on-surface mb-2">Plaques</h3>
+<a class="inline-flex items-center text-primary-container font-label-sm uppercase tracking-wider hover:text-primary transition-colors mt-4" href="#">
+                            Ver projeto <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- More Cards can be added here following the same structure, limiting output length for efficiency -->
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-16">
+<div class="bg-primary-container rounded-2xl p-12 text-center relative overflow-hidden electric-glow">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent"></div>
+<h2 class="relative z-10 font-headline-lg text-headline-lg text-white mb-6">Tem um projeto em mente?</h2>
+<p class="relative z-10 font-body-lg text-body-lg text-on-primary-container max-w-2xl mx-auto mb-8">
+                    Vamos conversar sobre como posso ajudar a transformar sua visão em uma experiência digital de alto impacto.
+                </p>
+<div class="relative z-10 flex flex-col sm:flex-row justify-center gap-4">
+<a class="inline-flex items-center justify-center bg-white text-primary-container px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors" href="#">
+<span class="material-symbols-outlined mr-2">chat</span> Iniciar via WhatsApp
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full bg-surface-container-lowest border-t border-outline-variant/20 font-body-md text-body-md text-primary">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-margin-mobile py-section-gap-mobile">
+<div class="mb-8 md:mb-0 text-center md:text-left">
+<span class="font-headline-md text-headline-md font-bold text-on-surface block mb-2">Leonardo.</span>
+<p class="text-on-surface-variant text-sm">Sites modernos. Experiências premium.</p>
+<p class="text-on-surface-variant text-sm mt-4">© 2024 Leonardo. Todos os direitos reservados.</p>
+</div>
+<div class="flex space-x-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors transition-opacity hover:opacity-80" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors transition-opacity hover:opacity-80" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors transition-opacity hover:opacity-80" href="#">Dribbble</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors transition-opacity hover:opacity-80" href="#">Instagram</a>
+</div>
+</div>
+</footer>
+<!-- Floating WhatsApp Button -->
+<a class="fixed bottom-6 right-6 z-50 bg-green-500 text-white p-4 rounded-full shadow-[0_10px_30px_rgba(34,197,94,0.3)] hover:scale-110 transition-transform flex items-center justify-center" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">forum</span>
+</a>
+</body></html>
